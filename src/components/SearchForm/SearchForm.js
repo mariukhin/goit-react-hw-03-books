@@ -7,18 +7,24 @@ export default class SearchForm extends Component {
     bookGenre: '',
   };
 
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  };
+
   handleInputChange = ({ target }) => {
     const { name, value } = target;
     this.setState({
       [name]: value,
     });
   };
+
   handleSubmit = e => {
     e.preventDefault();
-    // const { bookName, bookGenre } = this.state;
     const { onSubmit } = this.props;
     onSubmit({ ...this.state });
   };
+
   render() {
     const { bookName, bookGenre } = this.state;
     const { genres } = this.props;
