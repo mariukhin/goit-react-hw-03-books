@@ -16,12 +16,13 @@ BookList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       img: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
+      author: PropTypes.arrayOf(PropTypes.string),
       publisher: PropTypes.string.isRequired,
       publishedDate: PropTypes.string.isRequired,
       pageCount: PropTypes.number.isRequired,
-      rating: PropTypes.string.isRequired,
+      rating: PropTypes.number,
     }).isRequired,
   ).isRequired,
 };

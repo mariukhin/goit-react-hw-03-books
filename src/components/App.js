@@ -1,34 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-// import { PacmanLoader } from 'halogen';
 import Spinner from 'react-spinkit';
+import mapper from './helper';
 import SearchForm from './SearchForm/SearchForm';
 import BookList from './BookList/BookList';
-// import Loader from './Loader/Loader';
+import ErrorNotification from './ErrorNotification/ErrorNotification';
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?';
-const mapper = books => {
-  return books
-    .map(({ id, volumeInfo }) => ({
-      id,
-      volumeInfo,
-    }))
-    .map(
-      // eslint-disable-next-line no-return-assign
-      item =>
-        (item = {
-          id: item.id,
-          img: item.volumeInfo.imageLinks.smallThumbnail,
-          description: item.volumeInfo.description,
-          author: item.volumeInfo.authors,
-          publisher: item.volumeInfo.publisher,
-          publishedDate: item.volumeInfo.publishedDate,
-          pageCount: item.volumeInfo.pageCount,
-          rating: 'cool',
-        }),
-    );
-};
+
 export default class App extends Component {
   static propTypes = {
     genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
@@ -40,10 +20,8 @@ export default class App extends Component {
     error: null,
   };
 
-  formSubmit = ({ bookName, bookGenre }) => {
-    this.setState({ isLoading: true });
-
-    const RESULT_URL = `${API_URL}q=${bookName.toLowerCase()}+subject:${bookGenre}`;
+  fetchItems = (name, genre) => {
+    const RESULT_URL = `${API_URL}q=${name.toLowerCase()}+subject:${genre}`;
     axios
       .get(RESULT_URL)
       .then(response => this.setState({ books: mapper(response.data.items) }))
@@ -51,15 +29,19 @@ export default class App extends Component {
       .finally(() => this.setState({ isLoading: false }));
   };
 
+  formSubmit = ({ bookName, bookGenre }) => {
+    this.setState({ isLoading: true });
+    this.fetchItems(bookName, bookGenre);
+  };
+
   render() {
-    const { books, isLoading } = this.state;
+    const { books, isLoading, error } = this.state;
     const { genres } = this.props;
     return (
       <div>
         <SearchForm genres={genres} onSubmit={this.formSubmit} />
-        {/* {error && <ErrorNotification text={error.message} />} */}
+        {error && <ErrorNotification text={error.message} />}
         {isLoading && (
-          // <PacmanLoader loading color="#26A65B" size="16px" margin="4px" />
           <Spinner
             name="ball-spin-fade-loader"
             color="blue"

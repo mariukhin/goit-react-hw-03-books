@@ -22,4 +22,18 @@ const BookListItem = ({
     <p className="rating">{rating}</p>
   </div>
 );
+BookListItem.defaultProps = {
+  author: 'No author',
+  rating: 0.0,
+};
+BookListItem.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  author: PropTypes.arrayOf(PropTypes.string),
+  publisher: PropTypes.string.isRequired,
+  publishedDate: PropTypes.string.isRequired,
+  pageCount: PropTypes.number.isRequired,
+  rating: PropTypes.number,
+};
 export default BookListItem;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
   state = {
@@ -29,8 +30,9 @@ export default class SearchForm extends Component {
     const { bookName, bookGenre } = this.state;
     const { genres } = this.props;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.form} onSubmit={this.handleSubmit}>
         <input
+          className={styles.nameInput}
           type="text"
           placeholder="Enter genre"
           name="bookName"
@@ -38,6 +40,7 @@ export default class SearchForm extends Component {
           onChange={this.handleInputChange}
         />
         <select
+          className={styles.genreSelect}
           name="bookGenre"
           value={bookGenre}
           onChange={this.handleInputChange}
@@ -48,7 +51,9 @@ export default class SearchForm extends Component {
             </option>
           ))}
         </select>
-        <button type="submit">Search</button>
+        <button className={styles.submitBtn} type="submit">
+          Search
+        </button>
       </form>
     );
   }

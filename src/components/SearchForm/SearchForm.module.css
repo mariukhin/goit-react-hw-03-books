@@ -1,0 +1,37 @@
+.form {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+}
+.genreSelect,
+.nameInput {
+  border-radius: 3px;
+  border: 1px black solid;
+  padding-left: 5px;
+  box-shadow: 1px 3px 2px rgb(190, 189, 189);
+}
+.submitBtn {
+  display: inline-block;
+  min-width: 50px;
+  border: 0;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background-color: #3884ff;
+  transition: all 200ms ease;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 1px 3px 2px rgb(190, 189, 189);
+}
+
+.submitBtn:hover {
+  background-color: #13b629;
+}
