@@ -1,3 +1,4 @@
+/*eslint-disable*/
 export default function mapper(books) {
   return books
     .map(({ id, volumeInfo }) => ({

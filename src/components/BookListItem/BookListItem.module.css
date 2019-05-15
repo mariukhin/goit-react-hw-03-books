@@ -1,0 +1,13 @@
+.bookItem {
+  margin-top: 10px;
+  width: 500px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.imgBlock {
+  flex-basis: 128px;
+}
+.textBlock {
+  flex-basis: 342px;
+}

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Select from 'react-select';
 import styles from './SearchForm.module.css';
 
 export default class SearchForm extends Component {
   state = {
     bookName: '',
     bookGenre: '',
+    selectedOption: null,
   };
 
   static propTypes = {
@@ -20,6 +22,10 @@ export default class SearchForm extends Component {
     });
   };
 
+  changeOption = option => {
+    this.setState({ bookGenre: option.value, selectedOption: option });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     const { onSubmit } = this.props;
@@ -27,7 +33,7 @@ export default class SearchForm extends Component {
   };
 
   render() {
-    const { bookName, bookGenre } = this.state;
+    const { bookName, selectedOption } = this.state;
     const { genres } = this.props;
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
@@ -39,18 +45,13 @@ export default class SearchForm extends Component {
           value={bookName}
           onChange={this.handleInputChange}
         />
-        <select
+        <Select
+          value={selectedOption}
+          onChange={this.changeOption}
+          options={genres}
           className={styles.genreSelect}
-          name="bookGenre"
-          value={bookGenre}
-          onChange={this.handleInputChange}
-        >
-          {genres.map(item => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+          placeholder="Select genre.."
+        />
         <button className={styles.submitBtn} type="submit">
           Search
         </button>
