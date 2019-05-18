@@ -11,7 +11,7 @@ const API_URL = 'https://www.googleapis.com/books/v1/volumes?';
 
 export default class App extends Component {
   static propTypes = {
-    genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    genres: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   };
 
   state = {

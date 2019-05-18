@@ -12,7 +12,7 @@ export default class SearchForm extends Component {
 
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    genres: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   };
 
   handleInputChange = ({ target }) => {

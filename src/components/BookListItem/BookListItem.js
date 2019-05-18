@@ -41,17 +41,21 @@ const BookListItem = ({
   </div>
 );
 BookListItem.defaultProps = {
+  description: 'No description',
   author: 'No author',
+  publisher: 'No publisher',
+  publishedDate: 'No published date',
+  pageCount: 0,
   rating: 0.0,
 };
 BookListItem.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   author: PropTypes.arrayOf(PropTypes.string),
-  publisher: PropTypes.string.isRequired,
-  publishedDate: PropTypes.string.isRequired,
-  pageCount: PropTypes.number.isRequired,
+  publisher: PropTypes.string,
+  publishedDate: PropTypes.string,
+  pageCount: PropTypes.number,
   rating: PropTypes.number,
 };
 export default BookListItem;
