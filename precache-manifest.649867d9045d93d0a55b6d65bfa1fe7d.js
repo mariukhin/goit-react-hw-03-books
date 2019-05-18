@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/goit-react-hw-03-books/static/js/runtime~main.1e7bb8d1.js"
   },
   {
-    "revision": "91b49f133ab4ff646e63",
-    "url": "/goit-react-hw-03-books/static/js/main.9b096f1d.chunk.js"
+    "revision": "7404809be09a7783c3a2",
+    "url": "/goit-react-hw-03-books/static/js/main.f87f9620.chunk.js"
   },
   {
     "revision": "5ad21790f09da51b9229",
     "url": "/goit-react-hw-03-books/static/js/2.068b18f3.chunk.js"
   },
   {
-    "revision": "91b49f133ab4ff646e63",
+    "revision": "7404809be09a7783c3a2",
     "url": "/goit-react-hw-03-books/static/css/main.5b3d1479.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/goit-react-hw-03-books/static/css/2.64da6b22.chunk.css"
   },
   {
-    "revision": "9963d8395499bd198af2f5f07ab3af84",
+    "revision": "e62569f2e6ed3cf79cb25f7a1f922d1d",
     "url": "/goit-react-hw-03-books/index.html"
   }
 ];
