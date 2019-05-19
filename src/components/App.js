@@ -6,6 +6,7 @@ import mapper from './helper';
 import SearchForm from './SearchForm/SearchForm';
 import BookList from './BookList/BookList';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
+import './App.css';
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?';
 
@@ -41,13 +42,7 @@ export default class App extends Component {
       <div>
         <SearchForm genres={genres} onSubmit={this.formSubmit} />
         {error && <ErrorNotification text={error.message} />}
-        {isLoading && (
-          <Spinner
-            name="ball-spin-fade-loader"
-            color="blue"
-            className="loader"
-          />
-        )}
+        {isLoading && <Spinner name="ball-spin-fade-loader" color="blue" />}
         {books.length > 0 && <BookList items={books} />}
       </div>
     );
