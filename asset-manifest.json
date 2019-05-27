@@ -1,15 +1,15 @@
 {
-  "main.css": "/goit-react-hw-03-books/static/css/main.5b3d1479.chunk.css",
-  "main.js": "/goit-react-hw-03-books/static/js/main.f87f9620.chunk.js",
-  "main.js.map": "/goit-react-hw-03-books/static/js/main.f87f9620.chunk.js.map",
+  "main.css": "/goit-react-hw-03-books/static/css/main.579623e2.chunk.css",
+  "main.js": "/goit-react-hw-03-books/static/js/main.747ef9ea.chunk.js",
+  "main.js.map": "/goit-react-hw-03-books/static/js/main.747ef9ea.chunk.js.map",
   "runtime~main.js": "/goit-react-hw-03-books/static/js/runtime~main.1e7bb8d1.js",
   "runtime~main.js.map": "/goit-react-hw-03-books/static/js/runtime~main.1e7bb8d1.js.map",
-  "static/css/2.64da6b22.chunk.css": "/goit-react-hw-03-books/static/css/2.64da6b22.chunk.css",
-  "static/js/2.068b18f3.chunk.js": "/goit-react-hw-03-books/static/js/2.068b18f3.chunk.js",
-  "static/js/2.068b18f3.chunk.js.map": "/goit-react-hw-03-books/static/js/2.068b18f3.chunk.js.map",
+  "static/css/2.47ce4136.chunk.css": "/goit-react-hw-03-books/static/css/2.47ce4136.chunk.css",
+  "static/js/2.cb373028.chunk.js": "/goit-react-hw-03-books/static/js/2.cb373028.chunk.js",
+  "static/js/2.cb373028.chunk.js.map": "/goit-react-hw-03-books/static/js/2.cb373028.chunk.js.map",
   "index.html": "/goit-react-hw-03-books/index.html",
-  "precache-manifest.649867d9045d93d0a55b6d65bfa1fe7d.js": "/goit-react-hw-03-books/precache-manifest.649867d9045d93d0a55b6d65bfa1fe7d.js",
+  "precache-manifest.b711483ecccc6e90f25ee8e04d55c792.js": "/goit-react-hw-03-books/precache-manifest.b711483ecccc6e90f25ee8e04d55c792.js",
   "service-worker.js": "/goit-react-hw-03-books/service-worker.js",
-  "static/css/2.64da6b22.chunk.css.map": "/goit-react-hw-03-books/static/css/2.64da6b22.chunk.css.map",
-  "static/css/main.5b3d1479.chunk.css.map": "/goit-react-hw-03-books/static/css/main.5b3d1479.chunk.css.map"
+  "static/css/2.47ce4136.chunk.css.map": "/goit-react-hw-03-books/static/css/2.47ce4136.chunk.css.map",
+  "static/css/main.579623e2.chunk.css.map": "/goit-react-hw-03-books/static/css/main.579623e2.chunk.css.map"
 }
