@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import mapper from '../services/helper';
+import { mapper } from '../services/helper';
 import SearchForm from './SearchForm/SearchForm';
 import BookList from './BookList/BookList';
 import ErrorNotification from './ErrorNotification/ErrorNotification';

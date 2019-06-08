@@ -40,7 +40,7 @@ export default class SearchForm extends Component {
         <input
           className={styles.nameInput}
           type="text"
-          placeholder="Enter genre"
+          placeholder="Enter name"
           name="bookName"
           value={bookName}
           onChange={this.handleInputChange}

@@ -1,5 +1,5 @@
 /*eslint-disable*/
-export default function mapper(books) {
+export function mapper(books) {
   return books
     .map(({ id, volumeInfo }) => ({
       id,
@@ -20,3 +20,5 @@ export default function mapper(books) {
         }),
     );
 }
+export const descriptionParser = description =>
+  description.length >= 200 ? description.slice(0, 200) : description;
