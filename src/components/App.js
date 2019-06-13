@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { mapper } from '../services/helper';
 import SearchForm from './SearchForm/SearchForm';
 import BookList from './BookList/BookList';
 import ErrorNotification from './ErrorNotification/ErrorNotification';
 import fetchBooks from '../services/book-api';
 import Loader from './Loader/Loader';
+import genres from '../assets/genres.json';
 
 export default class App extends Component {
-  static propTypes = {
-    genres: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
-  };
-
   state = {
     books: [],
     isLoading: false,
@@ -32,7 +28,6 @@ export default class App extends Component {
 
   render() {
     const { books, isLoading, error } = this.state;
-    const { genres } = this.props;
     return (
       <div>
         <SearchForm genres={genres} onSubmit={this.formSubmit} />

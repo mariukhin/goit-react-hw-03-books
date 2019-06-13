@@ -1,6 +1,6 @@
 /*eslint-disable*/
-export function mapper(books) {
-  return books
+export const mapper = books =>
+  books
     .map(({ id, volumeInfo }) => ({
       id,
       volumeInfo,
@@ -19,6 +19,6 @@ export function mapper(books) {
           rating: item.volumeInfo.averageRating,
         }),
     );
-}
+
 export const descriptionParser = description =>
   description.length >= 200 ? description.slice(0, 200) : description;
